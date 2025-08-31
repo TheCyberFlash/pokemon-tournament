@@ -86,6 +86,15 @@ footer a {
   display: block;
 }
 
+.prize-img {
+  display: block; /* lets margin auto center it */
+  margin: 1.5rem auto; /* space above/below + center horizontally */
+  max-width: 50%; /* half the container width */
+  height: auto; /* keep proportions */
+  border-radius: 12px; /* optional: rounded corners */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* optional: subtle shadow */
+}
+
 .region-card h3 {
   margin: 0;
   padding: 0.75rem 0.5rem 1rem;
