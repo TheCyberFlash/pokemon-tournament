@@ -100,28 +100,28 @@
       "first": "KANTO",
       "second": "HOENN",
       "third": "GALAR",
-      "date": "2024-09-10"
+      "date": "2024-08-31"
     },
     {
       "name": "Group 2",
       "first": "JOHTO",
       "second": "PALDEA",
       "third": "SINNOH",
-      "date": "2024-09-12"
+      "date": "2024-09-04"
     },
     {
       "name": "Group 3",
       "first": "UNOVA",
       "second": "ALOLA",
       "third": "KALOS",
-      "date": "2024-09-14"
+      "date": "2024-09-08"
     },
     {
       "name": "Group 4",
       "first": "KANTO",
       "second": "JOHTO",
       "third": "UNOVA",
-      "date": "2024-09-16"
+      "date": "2024-09-13"
     }
   ],
   "currentGroup": {
