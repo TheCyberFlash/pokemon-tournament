@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Pokémon Tournament Hub</title>
+    <title>Pokémon Tournament Hub - Enhanced</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
 
@@ -40,102 +40,205 @@
   </head>
 
   <body>
-    <header>
-      <h1>Pokémon Tournament Hub 🏆</h1>
-      <p>Follow along with the daily polls and results!</p>
-    </header>
+    <div class="container">
+      <header class="hero-section">
+        <div class="hero-content">
+          <h1 class="main-title">
+            <span class="pokemon-icon">⚡</span>
+            Pokémon Tournament Hub
+            <span class="trophy-icon">🏆</span>
+          </h1>
+          <p class="hero-subtitle">
+            Follow along with the daily polls and results!
+          </p>
 
-    <main>
-      <h2>Current Poll</h2>
-      <div class="poll-status">
-        <strong>Group E polling active</strong>
-      </div>
-
-      <div class="poll-grid">
-        <!-- Card 1 -->
-        <article class="region-card">
-          <div class="img-wrap">
-            <img src="images/galar.png" alt="Galar starters" loading="lazy" />
+          <!-- Featured Prize at Top -->
+          <div class="featured-prize">
+            <div class="prize-glow">
+              <img
+                src="images/all-prize.png"
+                alt="Tournament prizes"
+                loading="lazy"
+                class="hero-prize-img"
+              />
+            </div>
+            <p class="prize-tagline">🏆 Win Amazing Prizes! 🏆</p>
           </div>
-          <h3>Galar</h3>
-        </article>
+        </div>
+      </header>
 
-        <!-- Card 2 -->
-        <article class="region-card">
-          <div class="img-wrap">
-            <img src="images/sinnoh.png" alt="Johto starters" loading="lazy" />
+      <main class="main-content">
+        <section class="current-poll-section">
+          <div class="section-header">
+            <h2 class="section-title">
+              <span class="poll-icon">📊</span>
+              Current Poll
+            </h2>
+            <div class="poll-status active">
+              <span class="status-indicator"></span>
+              <strong>Group E polling active</strong>
+            </div>
           </div>
-          <h3>Sinnoh</h3>
-        </article>
 
-        <!-- Card 3 -->
-        <article class="region-card">
-          <div class="img-wrap">
-            <img src="images/kalos.png" alt="Unova starters" loading="lazy" />
+          <div class="enhanced-poll-grid">
+            <!-- Card 1 -->
+            <article class="enhanced-region-card galar-card">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div class="img-container">
+                  <img
+                    src="images/galar.png"
+                    alt="Galar starters"
+                    loading="lazy"
+                  />
+                  <div class="card-overlay">
+                    <span class="region-badge">GALAR</span>
+                  </div>
+                </div>
+                <h3 class="region-name">Galar</h3>
+                <p class="region-desc">Dynamic and diverse region</p>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="enhanced-region-card sinnoh-card">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div class="img-container">
+                  <img
+                    src="images/sinnoh.png"
+                    alt="Sinnoh starters"
+                    loading="lazy"
+                  />
+                  <div class="card-overlay">
+                    <span class="region-badge">SINNOH</span>
+                  </div>
+                </div>
+                <h3 class="region-name">Sinnoh</h3>
+                <p class="region-desc">Mythical and legendary power</p>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="enhanced-region-card kalos-card">
+              <div class="card-glow"></div>
+              <div class="card-content">
+                <div class="img-container">
+                  <img
+                    src="images/kalos.png"
+                    alt="Kalos starters"
+                    loading="lazy"
+                  />
+                  <div class="card-overlay">
+                    <span class="region-badge">KALOS</span>
+                  </div>
+                </div>
+                <h3 class="region-name">Kalos</h3>
+                <p class="region-desc">Elegant and refined style</p>
+              </div>
+            </article>
           </div>
-          <h3>Kalos</h3>
-        </article>
-      </div>
 
-      <p class="vote-cta">
-        <a
-          class="btn"
-          href="https://x.com/TheCyberFLASH/status/1968387017286500508"
-          target="_blank"
-          rel="noopener"
-          >Vote on X →</a
-        >
-      </p>
+          <div class="vote-section">
+            <div class="vote-glow">
+              <a
+                class="enhanced-btn"
+                href="https://x.com/TheCyberFLASH/status/1968387017286500508"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="btn-icon">🗳️</span>
+                Vote on X
+                <span class="btn-arrow">→</span>
+              </a>
+            </div>
+            <p class="vote-hint">Your vote counts! Choose wisely</p>
+          </div>
+        </section>
 
-      <img
-        src="images/prize.jpg"
-        alt="Tournament prizes"
-        loading="lazy"
-        class="prize-img"
-      />
+        <section class="results-section">
+          <h2 class="section-title">
+            <span class="trophy-icon">🏅</span>
+            Previous Results
+          </h2>
+          <div class="results-grid">
+            <div class="result-card winner">
+              <div class="result-rank">1st</div>
+              <div class="result-content">
+                <h4>Group A Winner</h4>
+                <p class="result-region">KANTO</p>
+              </div>
+            </div>
+            <div class="result-card winner">
+              <div class="result-rank">2nd</div>
+              <div class="result-content">
+                <h4>Group B Winner</h4>
+                <p class="result-region">JOHTO</p>
+              </div>
+            </div>
+            <div class="result-card winner">
+              <div class="result-rank">3rd</div>
+              <div class="result-content">
+                <h4>Group C Winner</h4>
+                <p class="result-region">UNOVA</p>
+              </div>
+            </div>
+            <div class="result-card winner">
+              <div class="result-rank">4th</div>
+              <div class="result-content">
+                <h4>Group D Winner</h4>
+                <p class="result-region">KANTO</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 
-      <h2>Previous Results</h2>
-      <ul>
-        <li>Group A Winner: KANTO</li>
-        <li>Group B Winner: JOHTO</li>
-        <li>Group C Winner: UNOVA</li>
-        <li>Group D Winner: KANTO</li>
-      </ul>
-    </main>
+      <footer class="enhanced-footer">
+        <div class="footer-content">
+          <p class="footer-tagline">
+            Made for fun |
+            <a
+              href="https://x.com/TheCyberFlash"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-link"
+            >
+              @TheCyberFLASH
+            </a>
+            |
+            <a
+              href="https://x.com/bez_leda"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-link"
+            >
+              @bez_leda
+            </a>
+          </p>
 
-    <footer>
-      <p>
-        Made for fun |
-        <a
-          href="https://x.com/TheCyberFlash"
-          target="_blank"
-          rel="noopener noreferrer"
-          >@TheCyberFlash</a
-        >
-        |
-        <a
-          href="https://x.com/bez_leda"
-          target="_blank"
-          rel="noopener noreferrer"
-          >@bez_leda</a
-        >
-      </p>
+          <div class="footer-disclaimer">
+            <small class="disclaimer">
+              Pokémon and Pokémon character names are trademarks of Nintendo,
+              Game Freak, and The Pokémon Company. This site is a non-commercial
+              fan project and not affiliated with them.
+            </small>
 
-      <small class="disclaimer">
-        Pokémon and Pokémon character names are trademarks of Nintendo, Game
-        Freak, and The Pokémon Company. This site is a non-commercial fan
-        project and not affiliated with them.
-      </small>
-
-      <small class="credit">
-        Starter trio images via
-        <a
-          href="https://bulbapedia.bulbagarden.net/wiki/Starter_Pokémon#Grass,_Fire,_and_Water_trios"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Bulbapedia</a
-        >. Images shown for non-commercial, editorial fan purposes.
-      </small>
-    </footer>
+            <small class="credit">
+              Starter trio images via
+              <a
+                href="https://bulbapedia.bulbagarden.net/wiki/Starter_Pokémon#Grass,_Fire,_and_Water_trios"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-link"
+              >
+                Bulbapedia
+              </a>
+              . Images shown for non-commercial, editorial fan purposes.
+            </small>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
