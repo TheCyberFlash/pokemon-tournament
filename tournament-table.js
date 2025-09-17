@@ -8,15 +8,54 @@ class TournamentTable {
   }
 
   async init() {
+    console.log("Tournament Table initializing...");
     try {
+      console.log("Loading tournament data...");
       await this.loadTournamentData();
+      console.log("Data loaded successfully:", this.data);
+
+      console.log("Rendering overall standings...");
       this.renderOverallStandings();
+
+      console.log("Rendering completed groups...");
       this.renderCompletedGroups();
+
+      console.log("Rendering current group...");
       this.renderCurrentGroup();
+
+      console.log("Tournament table initialization complete!");
     } catch (error) {
       console.error("Error loading tournament data:", error);
       this.showError("Failed to load tournament data. Please try again later.");
+      // Add a fallback message to show the table is working
+      this.showFallbackTable();
     }
+  }
+
+  showFallbackTable() {
+    const tbody = document.querySelector("#overall-standings tbody");
+    if (!tbody) return;
+
+    tbody.innerHTML = `
+      <tr class="standings-row">
+        <td class="rank-cell">
+          <span class="rank-number">1</span>
+          <span class="rank-medal">🥇</span>
+        </td>
+        <td class="region-cell">
+          <div class="region-info">
+            <strong>Loading...</strong>
+          </div>
+        </td>
+        <td class="score-cell">
+          <strong class="score-value">-</strong>
+        </td>
+        <td class="battles-cell">- <small>battles</small></td>
+        <td class="stats-cell">
+          <small class="stats-breakdown">-</small>
+        </td>
+      </tr>
+    `;
   }
 
   async loadTournamentData() {
@@ -28,11 +67,19 @@ class TournamentTable {
   }
 
   renderOverallStandings() {
-    if (!this.data?.regions) return;
+    console.log("Rendering standings with data:", this.data);
+    if (!this.data?.regions) {
+      console.error("No regions data found");
+      return;
+    }
 
     const tbody = document.querySelector("#overall-standings tbody");
-    if (!tbody) return;
+    if (!tbody) {
+      console.error("Table body not found");
+      return;
+    }
 
+    console.log("Found table body, clearing and populating...");
     tbody.innerHTML = "";
 
     // Sort regions by battle score (highest first)
@@ -40,10 +87,14 @@ class TournamentTable {
       (a, b) => b.battleScore - a.battleScore
     );
 
+    console.log("Sorted regions:", sortedRegions);
+
     sortedRegions.forEach((region, index) => {
       const row = this.createStandingsRow(region, index + 1);
       tbody.appendChild(row);
     });
+
+    console.log("Standings rendered successfully");
   }
 
   createStandingsRow(region, rank) {
@@ -224,8 +275,18 @@ class TournamentTable {
 
 // Initialize the tournament table when the page loads
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM Content Loaded - Starting tournament table...");
   new TournamentTable();
 });
+
+// Also try to initialize after a short delay in case of timing issues
+setTimeout(() => {
+  console.log("Fallback initialization attempt...");
+  if (!document.querySelector("#overall-standings tbody tr")) {
+    console.log("No table rows found, reinitializing...");
+    new TournamentTable();
+  }
+}, 1000);
 
 // Export for potential use in other scripts
 if (typeof module !== "undefined" && module.exports) {
