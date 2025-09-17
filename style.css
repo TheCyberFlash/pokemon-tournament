@@ -578,3 +578,522 @@ body {
     font-size: 1.5rem;
   }
 }
+
+/* Tournament Table Styles */
+
+/* Tournament Table */
+.table-container {
+  background: linear-gradient(
+    135deg,
+    var(--card-bg) 0%,
+    rgba(26, 26, 46, 0.9) 100%
+  );
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-strong);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem 0;
+}
+
+.tournament-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--text-primary);
+}
+
+.tournament-table th {
+  background: linear-gradient(
+    135deg,
+    var(--pokemon-blue) 0%,
+    var(--pokemon-purple) 100%
+  );
+  color: var(--text-primary);
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.tournament-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.tournament-table tbody tr:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.standings-row.qualified {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.standings-row.eliminated {
+  opacity: 0.7;
+}
+
+.rank-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.rank-number {
+  font-size: 1.25rem;
+  color: var(--pokemon-yellow);
+}
+
+.rank-medal {
+  font-size: 1.5rem;
+}
+
+.region-cell .region-info strong {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.score-cell .score-value {
+  color: var(--pokemon-green);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.battles-cell {
+  color: var(--text-secondary);
+}
+
+.battles-cell small {
+  font-size: 0.8rem;
+}
+
+.stats-cell .stats-breakdown {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Current Group Section */
+.current-group-section {
+  margin: 3rem 0;
+}
+
+.current-group-container {
+  margin: 2rem 0;
+}
+
+.current-group-regions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.current-region {
+  background: linear-gradient(
+    135deg,
+    var(--card-bg) 0%,
+    rgba(26, 26, 46, 0.9) 100%
+  );
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.current-region:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+}
+
+.current-region .region-name {
+  font-weight: 700;
+  color: var(--text-primary);
+  display: block;
+}
+
+/* Point System Section */
+.points-section {
+  margin: 3rem 0;
+}
+
+.points-explanation {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.point-rule {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(
+    135deg,
+    var(--card-bg) 0%,
+    rgba(26, 26, 46, 0.9) 100%
+  );
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.point-rule:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.point-medal {
+  font-size: 1.5rem;
+}
+
+.point-text {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.point-text strong {
+  color: var(--pokemon-yellow);
+  font-weight: 700;
+}
+
+/* Groups Section */
+.groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.group-card {
+  background: linear-gradient(
+    135deg,
+    var(--card-bg) 0%,
+    rgba(26, 26, 46, 0.9) 100%
+  );
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-strong);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.group-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.group-card.active {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.2);
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(139, 92, 246, 0.1) 100%
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.group-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.group-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.group-status.completed {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--pokemon-green);
+}
+
+.group-status.active {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--pokemon-yellow);
+}
+
+.group-table {
+  padding: 1rem;
+}
+
+.group-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.group-table th {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--text-secondary);
+  padding: 0.5rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.group-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+}
+
+/* Recent Matches */
+.matches-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.match-card {
+  background: linear-gradient(
+    135deg,
+    var(--card-bg) 0%,
+    rgba(26, 26, 46, 0.9) 100%
+  );
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.match-card.active {
+  border-color: rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.match-group {
+  font-weight: 600;
+  color: var(--pokemon-blue);
+  font-size: 0.9rem;
+}
+
+.match-date {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.match-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.match-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.match-team.winner {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.team-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.team-score {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--pokemon-yellow);
+}
+
+.match-vs {
+  font-weight: 700;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0 1rem;
+}
+
+.match-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.match-winner {
+  color: var(--pokemon-green);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Navigation Section */
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 3rem 0;
+}
+
+/* Standings Navigation */
+.standings-nav {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.standings-btn {
+  background: linear-gradient(
+    135deg,
+    var(--pokemon-yellow) 0%,
+    var(--pokemon-red) 100%
+  ) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3) !important;
+}
+
+.standings-btn:hover {
+  background: linear-gradient(
+    135deg,
+    var(--pokemon-red) 0%,
+    var(--pokemon-yellow) 100%
+  ) !important;
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.5) !important;
+}
+
+.standings-hint {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* Error Message */
+.error-message {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.1) 0%,
+    rgba(239, 68, 68, 0.05) 100%
+  );
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.error-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.error-icon {
+  font-size: 1.5rem;
+}
+
+.error-text {
+  color: var(--glow-red);
+  font-weight: 600;
+}
+
+/* Mobile Responsive for Tournament Table */
+@media (max-width: 768px) {
+  .table-container {
+    margin: 1rem 0;
+    overflow-x: auto;
+  }
+
+  .tournament-table {
+    min-width: 600px;
+  }
+
+  .groups-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .matches-container {
+    grid-template-columns: 1fr;
+  }
+
+  .match-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .match-vs {
+    margin: 0;
+    order: 1;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-buttons .enhanced-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .standings-btn {
+    width: 100% !important;
+    max-width: 320px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .match-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .group-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

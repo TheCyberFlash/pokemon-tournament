@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pokémon Tournament Standings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pokémon Tournament Standings!" />
+    <meta
+      property="og:description"
+      content="Check out the current tournament standings and group results."
+    />
+    <meta
+      property="og:image"
+      content="https://thecyberflash.github.io/pokemon-tournament/images/giveaway.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://thecyberflash.github.io/pokemon-tournament/table.html"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pokémon Tournament Standings!" />
+    <meta
+      name="twitter:description"
+      content="Check out the current tournament standings and group results."
+    />
+    <meta
+      name="twitter:image"
+      content="https://thecyberflash.github.io/pokemon-tournament/images/giveaway.png"
+    />
+    <meta name="twitter:site" content="@TheCyberFLASH" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="hero-section">
+        <div class="hero-content">
+          <h1 class="main-title">
+            <span class="pokemon-icon">📊</span>
+            Tournament Standings
+            <span class="trophy-icon">🏆</span>
+          </h1>
+          <p class="hero-subtitle">Track the progress and see who's leading!</p>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <!-- Tournament Standings -->
+        <section class="standings-section">
+          <h2 class="section-title">
+            <span class="trophy-icon">🥇</span>
+            Tournament Standings
+          </h2>
+          <div class="table-container">
+            <table class="tournament-table" id="overall-standings">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Region</th>
+                  <th>Battle Score</th>
+                  <th>Total Battles</th>
+                  <th>Achievements</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Data will be populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Current Group -->
+        <section class="current-group-section">
+          <h2 class="section-title">
+            <span class="poll-icon">⚡</span>
+            Current Group
+          </h2>
+          <div class="current-group-container" id="current-group-container">
+            <!-- Current group will be populated by JavaScript -->
+          </div>
+        </section>
+
+        <!-- Completed Groups -->
+        <section class="groups-section">
+          <h2 class="section-title">
+            <span class="trophy-icon">🏅</span>
+            Completed Groups
+          </h2>
+          <div class="groups-grid" id="groups-container">
+            <!-- Group cards will be populated by JavaScript -->
+          </div>
+        </section>
+
+        <!-- Point System -->
+        <section class="points-section">
+          <h2 class="section-title">
+            <span class="trophy-icon">💎</span>
+            Point System
+          </h2>
+          <div class="points-explanation">
+            <div class="point-rule">
+              <span class="point-medal">🥇</span>
+              <span class="point-text"
+                >1st Place: <strong>5 points</strong></span
+              >
+            </div>
+            <div class="point-rule">
+              <span class="point-medal">🥈</span>
+              <span class="point-text"
+                >2nd Place: <strong>3 points</strong></span
+              >
+            </div>
+            <div class="point-rule">
+              <span class="point-medal">🥉</span>
+              <span class="point-text"
+                >3rd Place: <strong>1 point</strong></span
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="navigation-section">
+          <div class="nav-buttons">
+            <a href="index.html" class="enhanced-btn">
+              <span class="btn-icon">🏠</span>
+              Back to Main Hub
+              <span class="btn-arrow">←</span>
+            </a>
+            <a
+              href="https://x.com/TheCyberFLASH"
+              target="_blank"
+              class="enhanced-btn"
+            >
+              <span class="btn-icon">🐦</span>
+              Follow for Updates
+              <span class="btn-arrow">→</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="enhanced-footer">
+        <div class="footer-content">
+          <p class="footer-tagline">
+            Made for fun |
+            <a
+              href="https://x.com/TheCyberFlash"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-link"
+            >
+              @TheCyberFLASH
+            </a>
+            |
+            <a
+              href="https://x.com/bez_leda"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-link"
+            >
+              @bez_leda
+            </a>
+          </p>
+
+          <div class="footer-disclaimer">
+            <small class="disclaimer">
+              Pokémon and Pokémon character names are trademarks of Nintendo,
+              Game Freak, and The Pokémon Company. This site is a non-commercial
+              fan project and not affiliated with them.
+            </small>
+
+            <small class="credit">
+              Starter trio images via
+              <a
+                href="https://bulbapedia.bulbagarden.net/wiki/Starter_Pokémon#Grass,_Fire,_and_Water_trios"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-link"
+              >
+                Bulbapedia
+              </a>
+              . Images shown for non-commercial, editorial fan purposes.
+            </small>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JavaScript for loading tournament data -->
+    <script src="tournament-table.js"></script>
+  </body>
+</html>
