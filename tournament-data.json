@@ -4,7 +4,7 @@
     "currentRound": "Group Stage",
     "totalRegions": 9,
     "activePolls": 1,
-    "lastUpdated": "2024-09-17",
+    "lastUpdated": "2024-09-23",
     "pointSystem": {
       "firstPlace": 5,
       "secondPlace": 3,
@@ -41,9 +41,9 @@
     },
     {
       "name": "SINNOH",
-      "battleScore": 3,
-      "totalBattles": 1,
-      "wins": 0,
+      "battleScore": 8,
+      "totalBattles": 2,
+      "wins": 1,
       "secondPlaces": 1,
       "thirdPlaces": 0,
       "image": "images/sinnoh.png"
@@ -68,19 +68,19 @@
     },
     {
       "name": "GALAR",
-      "battleScore": 1,
-      "totalBattles": 1,
+      "battleScore": 2,
+      "totalBattles": 2,
       "wins": 0,
       "secondPlaces": 0,
-      "thirdPlaces": 1,
+      "thirdPlaces": 2,
       "image": "images/galar.png"
     },
     {
       "name": "KALOS",
-      "battleScore": 1,
-      "totalBattles": 1,
+      "battleScore": 4,
+      "totalBattles": 2,
       "wins": 0,
-      "secondPlaces": 0,
+      "secondPlaces": 1,
       "thirdPlaces": 1,
       "image": "images/kalos.png"
     },
@@ -122,12 +122,19 @@
       "second": "JOHTO",
       "third": "UNOVA",
       "date": "2024-09-13"
+    },
+    {
+      "name": "Group 5",
+      "first": "SINNOH",
+      "second": "KALOS",
+      "third": "GALAR",
+      "date": "2024-09-17"
     }
   ],
   "currentGroup": {
-    "name": "Group 5",
-    "regions": ["GALAR", "SINNOH", "KALOS"],
+    "name": "Group 6",
+    "regions": ["HOENN", "PALDEA", "ALOLA"],
     "status": "active",
-    "startDate": "2024-09-17"
+    "startDate": "2024-09-23"
   }
 }
